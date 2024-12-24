@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand poppins-bold" href="#">
+          <!-- Shortly -->
+          <img src="./images/logo.svg" alt="pic" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Resources</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button class="btn me-2" type="submit">Login</button>
+            <button
+              class="btn rounded-pill text-white sign-up btns"
+              type="submit"
+            >
+              Sign Up
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="main-section mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 sec-one">
+            <h1 class="poppins-bold">More than just shorter links</h1>
+            <p class="poppins-regular">
+              Build your brand’s recognition and get detailed <br />
+              insights on how your links are performing.
+            </p>
+            <button
+              class="btn rounded-pill text-white sign-up btns"
+              type="submit"
+            >
+              Get Started
+            </button>
+          </div>
+          <div class="col-lg-3">
+            <img
+              class="main-pic"
+              src="./images/illustration-working.svg"
+              alt="pic"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="advances-sec">
+      <div class="container position-relative">
+        <div class="link-part rounded box">
+          <div class="form-container">
+            <form class="row needs-validation" novalidate>
+              <div class="col-lg-10 position-relative">
+                <!-- <label for="validationTooltip03" class="form-label">City</label> -->
+                <input
+                  type="text"
+                  class="form-control w-100 mb-2 input"
+                  id="validationTooltip03 "
+                  placeholder="Shorten a link here..."
+                  required
+                />
+                <div class="invalid-tooltip">Please add a Link.</div>
+              </div>
+              <div class="col-lg-2">
+                <button
+                  class="btn sign-up submit poppins-semibold"
+                  type="submit"
+                  id="submit"
+                >
+                  Shorten It!
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="links mt-2">
+          <div class="row" id="links-row">
+            <!-- <div class="col-lg-12">
+              <div
+                class="link bg-white py-2 px-3 mb-2 w-100 d-flex justify-content-between align-items-center flex-wrap rounded-1"
+              >
+                <div class="main-link">https://google.com</div>
+                <div class="left-part d-flex align-items-center">
+                  <div class="shorten-link">https://goojdhakjg.com</div>
+                  <button class="btn btn-primary sign-up ms-3 border-0 copy">
+                    Copy
+                  </button>
+                </div>
+              </div>
+            </div> -->
+            <!-- <div class="col-lg-12">
+              <div
+                class="link bg-warning py-2 px-3 mb-2 w-100 d-flex justify-content-between align-items-center flex-wrap rounded-1"
+              >
+                <div class="main-link">https://google.com</div>
+                <div class="left-part d-flex align-items-center">
+                  <div class="shorten-link">https://goojdhakjg.com</div>
+                  <button class="btn btn-primary sign-up ms-3 border-0 copy">
+                    Copy
+                  </button>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="statistis-part text-center mt-4 mb-5">
+          <h2 class="poppins-extrabold">Advanced Statistics</h2>
+          <p>
+            Track how your links are performing across the web with <br />
+            advanced statistics dashboard.
+          </p>
+        </div>
+        <div class="cards row g-4 justify-content-between mt-5">
+          <div class="col-lg-4 position-relative card-1">
+            <div class="icon"></div>
+            <div class="bg-white p-3 px-4">
+              <div class="card-title poppins-semibold mt-5">
+                Brand Recognition
+              </div>
+              <div class="card-body pt-0">
+                Boost your brand recognition with each click. Generic links
+                don’t mean a thing. Branded links help instil confidence in your
+                content.
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 position-relative card-2">
+            <div class="icon"></div>
+            <div class="bg-white p-3 px-4">
+              <div class="card-title poppins-semibold mt-5">
+                Detailed Records
+              </div>
+              <div class="card-body pt-0">
+                Gain insights into who is clicking your links. Knowing when and
+                where people engage with your content helps inform better
+                decisions.
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 position-relative card-3">
+            <div class="icon"></div>
+            <div class="bg-white p-3 px-4">
+              <div class="card-title poppins-semibold mt-5">
+                Fully Customizable
+              </div>
+              <div class="card-body pt-0">
+                Improve brand awareness and content discoverability through
+                customizable links, supercharging audience engagement.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="boost text-center p-5">
+      <!-- <div class="container"> -->
+      <h2 class="poppins-bold">Boost your links today</h2>
+      <button
+        class="btn rounded-pill text-white sign-up btns poppins-medium px-4 py-2"
+        type="submit"
+      >
+        Get Started
+      </button>
+      <!-- </div> -->
+    </div>
+    <footer class="bg-black py-5">
+      <div class="container">
+        <div class="row flex-wrap">
+          <div class="col-lg-3 col-md-6 col-sm-12 mb-5 ms-3">
+            <span class="footer-header poppins-bold fs-2">Shortly</span>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-6 mb-3">
+            <ul>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Link Shortening</a></li>
+              <li><a href="#">Branded Links</a></li>
+              <li><a href="#">Analytics</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-6 mb-3">
+            <ul>
+              <li><a href="#">Resources</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Developers</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-6 mb-3">
+            <ul>
+              <li><a href="#">Company</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-6 mb-3 icons-imgs">
+            <img src="./images/icon-facebook.svg" alt="pic" />
+            <img src="./images/icon-twitter.svg" alt="pic" />
+            <img src="./images/icon-pinterest.svg" alt="pic" />
+            <img src="./images/icon-instagram.svg" alt="pic" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
+<!-- <img src="./images/bg-boost-desktop.svg" />
+<img src="./images/bg-boost-mobile.svg" />
+<img src="./images/bg-shorten-desktop.svg" />
+<img src="./images/bg-shorten-mobile.svg" />
+<img src="./images/bg-boost-desktop.svg" />
+<img src="./images/bg-boost-mobile.svg" />
+<img src="./images/bg-shorten-desktop.svg" />
+<img src="./images/bg-shorten-mobile.svg" />
+<img src="./images/favicon-32x32.png" />
+<img src="./images/icon-brand-recognition.svg" />
+<img src="./images/icon-detailed-records.svg" />
+<img src="./images/icon-facebook.svg" />
+<img src="./images/icon-fully-customizable.svg" />
+<img src="./images/icon-instagram.svg" />
+<img src="./images/icon-pinterest.svg" />
+<img src="./images/icon-twitter.svg" />
+<img src="./images/illustration-working.svg" />
+<img src="./images/logo.svg" />
+<img src="./images/favicon-32x32.png" />
+<img src="./images/icon-brand-recognition.svg" />
+<img src="./images/icon-detailed-records.svg" />
+<img src="./images/icon-facebook.svg" />
+<img src="./images/icon-fully-customizable.svg" />
+<img src="./images/icon-instagram.svg" />
+<img src="./images/icon-pinterest.svg" />
+<img src="./images/icon-twitter.svg" />
+<img src="./images/illustration-working.svg" />
+<img src="./images/logo.svg" /> -->
