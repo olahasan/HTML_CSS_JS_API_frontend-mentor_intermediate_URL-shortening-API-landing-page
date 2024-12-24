@@ -61,6 +61,7 @@ Through this project:
 
 ## helpful-links
 - **API** : (https://cleanuri.com/docs)
+- **Run Chrome browser without CORS** : (https://alfilatov.com/posts/run-chrome-without-cors/)
 - **fontawesome** : (https://fontawesome.com/)
 - **Bootstrap** : (https://getbootstrap.com/)
 - **Axios** : (https://axios-http.com/docs/intro)
